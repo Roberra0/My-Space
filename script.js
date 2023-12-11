@@ -6,7 +6,9 @@ const contentToFadeIn = Array.from(document.querySelectorAll('h2, p, ul'));
 
 function typewriter() {
   if (currentCharIndex === text.length) {
+    // Fade in all content after typing is finished
     contentToFadeIn.forEach((element) => {
+      element.style.display = 'block';
       element.classList.add('fade-in');
     });
     return;
